@@ -7,7 +7,7 @@ namespace Lab12
 {
     class View : IView
     {
-        IView view;
+        IView view = new View();
 
         public void update(string input)
         {
