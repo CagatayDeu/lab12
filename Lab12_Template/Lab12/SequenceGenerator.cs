@@ -9,6 +9,8 @@ namespace Lab12
 {
     class SequenceGenerator : IModel
     {
+        IController controller;
+
         string get = string.Empty;
         string url = @"https://www.random.org/sequences/?min=1&max=52&col=1&format=plain&rnd=new";
 
@@ -28,6 +30,14 @@ namespace Lab12
             notify();
         }
 
-    
+        public void notify()
+        {
+            Console.WriteLine(get);
+        }
+
+        public void setController(IController i)
+        {
+            controller = i;
+        }
     }
 }

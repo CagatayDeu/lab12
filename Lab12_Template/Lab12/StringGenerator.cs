@@ -9,6 +9,9 @@ namespace Lab12
 {
     class StringGenerator : IModel
     {
+
+        IController controller;
+
         string get = string.Empty;
         string url = @"https://www.random.org/strings/?num=10&len=8&digits=on&upperalpha=on&loweralpha=on&unique=on&format=plain&rnd=new";
        
@@ -28,6 +31,14 @@ namespace Lab12
             notify();
         }
 
-       
+        public void notify()
+        {
+            Console.WriteLine(get);
+        }
+
+        public void setController(IController i)
+        {
+            controller = i;
+        }
     }
 }

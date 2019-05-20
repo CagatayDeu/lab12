@@ -9,6 +9,8 @@ namespace Lab12
 {
     class IntegerGenerator : IModel
     {
+        IController controller;
+
         string get = string.Empty;
         string url = @"https://www.random.org/integers/?num=10&min=1&max=6&col=1&base=10&format=plain&rnd=new";
         
@@ -28,6 +30,14 @@ namespace Lab12
             notify();
         }
 
-       
+        public void notify()
+        {
+            Console.WriteLine(get);
+        }
+
+        public void setController(IController i)
+        {
+            controller = i;
+        }
     }
 }

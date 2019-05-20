@@ -7,6 +7,11 @@ namespace Lab12
 {
     class View : IView
     {
-       
+        IView view;
+
+        public void update(string input)
+        {
+            view.update(input);
+        }
     }
 }
